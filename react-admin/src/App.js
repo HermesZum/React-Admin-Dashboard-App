@@ -7,12 +7,28 @@ import { FiSettings } from 'react-icons/fi';
 /* Importing the Tooltip and TooltipComponent from the @syncfusion/ej2-react-popups package. */
 import { Tooltip, TooltipComponent } from "@syncfusion/ej2-react-popups";
 /* Importing the `Navbar`, `Footer`, `Sidebar`, and `ThemeSettings` components from the `./components` directory. */
-import { Navbar, Footer, Sidebar, ThemeSettings} from "./components";
+import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
 /* Importing the components from the `pages` directory. */
-import { Ecommerce, Orders, Employees, Customers, Kanban, Editor, Calendar, ColorPicker, Line, Area, Bar, Pie, Financial, ColorMapping, Pyramid, Stacked } from "./pages";
+import {
+    Ecommerce,
+    Orders,
+    Employees,
+    Customers,
+    Kanban,
+    Editor,
+    Calendar,
+    ColorPicker,
+    Line,
+    Area,
+    Bar,
+    Pie,
+    Financial,
+    ColorMapping,
+    Pyramid,
+    Stacked
+} from "./pages";
 /* Importing the CSS file. */
 import './App.css';
-
 
 /**
  * App Component is the main component in React which acts as a container for all other components.
@@ -25,12 +41,12 @@ const App = () => {
         <div>
             <BrowserRouter>
                 <div className={ 'appContainer' }>
-                    <div className={ 'tooltipContainer' } style={ { zIndex: '1000' } }>
+                    <div className={ 'tooltipContainer' } style={ { zIndex : '1000' } }>
                         <TooltipComponent content={ 'Settings' } position={ 'Top' }>
                             <button
                                 type={ 'button' }
                                 className={ 'settingsButton' }
-                                style={ { background: 'blue', borderRadius: '50%' } }
+                                style={ { background : 'blue', borderRadius : '50%' } }
                             >
                                 <FiSettings/>
                             </button>
@@ -38,56 +54,57 @@ const App = () => {
                     </div>
                     {/* A ternary operator. */ }
                     { activeMenu
-                        ?
-                        (
-                            <div className={ 'sidebar sidebarContainer' }>
-                                Sidebar
-                            </div>
-                        )
-                        :
-                        (
-                            <div className={ 'sidebarContainerDisabled' }>
-                                Sidebar
-                            </div>
-                        )
+                      ?
+                      (
+                          <div className={ 'sidebar sidebarContainer' }>
+                              <Sidebar/>
+                          </div>
+                      )
+                      :
+                      (
+                          <div className={ 'sidebarContainerDisabled' }>
+                              <Sidebar/>
+                          </div>
+                      )
                     }
                     <div className={
                         `bg-main-bg min-h-screen w-full dark:bg-main-dark-bg
                             ${ activeMenu
-                            ? 'md:ml-72'
-                            : 'flex-2'
+                               ? 'md:ml-72'
+                               : 'flex-2'
                         }`
                     }
                     >
                         <div className={ 'navbar navbarContainer' }>
-                            Navbar
+                            <Navbar/>
                         </div>
                     </div>
                     <div>
                         <Routes>
                             {/* Dashboard */ }
-                            <Route path="/" element={ <div>ECommerce</div> }/>
-                            <Route path="/ecommerce" element={ <div>ECommerce</div> }/>
+                            <Route path="/" element={ <Ecommerce/> }/>
+                            <Route path="/ecommerce" element={ <Ecommerce/> }/>
 
                             {/* Pages */ }
-                            <Route path="/orders" element={ <div>Orders</div> }/>
-                            <Route path="/employees" element={ <div>Employees</div> }/>
-                            <Route path="/customers" element={ <div>Customers</div> }/>
+                            <Route path="/orders" element={ <Orders/> }/>
+                            <Route path="/employees" element={ <Employees/> }/>
+                            <Route path="/customers" element={ <Customers/> }/>
 
                             {/* Apps */ }
-                            <Route path="/calendar" element={ <div>Calendar</div> }/>
-                            <Route path="/kanban" element={ <div>Kanban</div> }/>
-                            <Route path="/editor" element={ <div>Editor</div> }/>
-                            <Route path="/color-picker" element={ <div>Color-Picker</div> }/>
+                            <Route path="/calendar" element={ <Calendar/> }/>
+                            <Route path="/kanban" element={ <Kanban/> }/>
+                            <Route path="/editor" element={ <Editor/> }/>
+                            <Route path="/color-picker" element={ <ColorPicker/> }/>
 
                             {/* Charts */ }
-                            <Route path="/line" element={ <div>Line</div> }/>
-                            <Route path="/area" element={ <div>Area</div> }/>
-                            <Route path="/bar" element={ <div>Bar</div> }/>
-                            <Route path="/pie" element={ <div>Pie</div> }/>
-                            <Route path="/financial" element={ <div>Financial</div> }/>
-                            <Route path="/color-mapping" element={ <div>Color-Mapping</div> }/>
-                            <Route path="/pyramid" element={ <div>Pyramid</div> }/>
+                            <Route path="/line" element={ <Line/> }/>
+                            <Route path="/area" element={ <Area/> }/>
+                            <Route path="/bar" element={ <Bar/> }/>
+                            <Route path="/pie" element={ <Pie/> }/>
+                            <Route path="/financial" element={ <Financial/> }/>
+                            <Route path="/color-mapping" element={ <ColorMapping/> }/>
+                            <Route path="/pyramid" element={ <Pyramid/> }/>
+                            <Route path="/pyramid" element={ <Stacked/> }/>
                         </Routes>
                     </div>
                 </div>
