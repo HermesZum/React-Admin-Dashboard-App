@@ -27,6 +27,8 @@ import {
     Pyramid,
     Stacked
 } from "./pages";
+/* Importing the `useStateContext` hook from the `ContextProvider` component. */
+import { useStateContext} from "./context/ContextProvider";
 /* Importing the CSS file. */
 import './App.css';
 
@@ -35,8 +37,7 @@ import './App.css';
  * @returns A React component
  */
 const App = () => {
-    /* A variable that is used to determine whether the sidebar is active or not. */
-    const activeMenu = false;
+    const { activeMenu } = useStateContext();
     return (
         <div>
             <BrowserRouter>

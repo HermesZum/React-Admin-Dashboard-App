@@ -33,3 +33,27 @@ body{
 .navbarContainer {
     @apply fixed w-full bg-main-bg md:static dark:bg-main-dark-bg;
 }
+
+.sidebarNav {
+    @apply flex justify-between items-center;
+}
+
+.sidebarIcon {
+    @apply w-5;
+}
+
+.sidebarLinks {
+    @apply flex text-xl text-slate-900 font-extrabold tracking-tight items-center gap-3 ml-3 mt-4 dark:text-white;
+}
+
+.sidebarLinkActive {
+    @apply flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-indigo-500 text-xl m-2;
+}
+
+.sidebarLinkNormal {
+    @apply flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-lg text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2;
+}
+
+.sidebarCloseButton {
+    @apply block mt-4 mr-3 p-3 text-xl rounded-full hover:bg-light-gray md:hidden;
+}
