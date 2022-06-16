@@ -6,8 +6,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FiSettings } from 'react-icons/fi';
 /* Importing the Tooltip and TooltipComponent from the @syncfusion/ej2-react-popups package. */
 import { Tooltip, TooltipComponent } from "@syncfusion/ej2-react-popups";
+/* Importing the `Navbar`, `Footer`, `Sidebar`, and `ThemeSettings` components from the `./components` directory. */
+import { Navbar, Footer, Sidebar, ThemeSettings} from "./components";
+/* Importing the components from the `pages` directory. */
+import { Ecommerce, Orders, Employees, Customers, Kanban, Editor, Calendar, ColorPicker, Line, Area, Bar, Pie, Financial, ColorMapping, Pyramid, Stacked } from "./pages";
 /* Importing the CSS file. */
 import './App.css';
+
 
 /**
  * App Component is the main component in React which acts as a container for all other components.
