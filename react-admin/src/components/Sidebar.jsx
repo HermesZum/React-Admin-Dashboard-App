@@ -17,7 +17,7 @@ const Sidebar = () => {
                     <div className="sidebarNav">
                         <Link to={ '/' } onClick={ () => setActiveMenu(false) } className={ 'sidebarLinks' } >
                             <SiShopware className={ 'sidebarIcon' } />
-                                Shoppe
+                                3Gear
                         </Link>
                         <TooltipComponent content={'Menu'} position={'BottomCenter'} >
                             <button

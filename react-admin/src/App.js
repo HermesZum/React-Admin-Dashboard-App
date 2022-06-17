@@ -28,7 +28,7 @@ import {
     Stacked
 } from "./pages";
 /* Importing the `useStateContext` hook from the `ContextProvider` component. */
-import { useStateContext} from "./context/ContextProvider";
+import { useStateContext } from "./context/ContextProvider";
 /* Importing the CSS file. */
 import './App.css';
 
