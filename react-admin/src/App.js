@@ -37,6 +37,7 @@ import './App.css';
  * @returns A React component
  */
 const App = () => {
+    /* Destructuring the `activeMenu` property from the `useStateContext()` hook. */
     const { activeMenu } = useStateContext();
     return (
         <div>
@@ -79,34 +80,33 @@ const App = () => {
                         <div className={ 'navbar navbarContainer' }>
                             <Navbar/>
                         </div>
-                    </div>
-                    <div>
-                        <Routes>
-                            {/* Dashboard */ }
-                            <Route path="/" element={ <Ecommerce/> }/>
-                            <Route path="/ecommerce" element={ <Ecommerce/> }/>
-
-                            {/* Pages */ }
-                            <Route path="/orders" element={ <Orders/> }/>
-                            <Route path="/employees" element={ <Employees/> }/>
-                            <Route path="/customers" element={ <Customers/> }/>
-
-                            {/* Apps */ }
-                            <Route path="/calendar" element={ <Calendar/> }/>
-                            <Route path="/kanban" element={ <Kanban/> }/>
-                            <Route path="/editor" element={ <Editor/> }/>
-                            <Route path="/color-picker" element={ <ColorPicker/> }/>
-
-                            {/* Charts */ }
-                            <Route path="/line" element={ <Line/> }/>
-                            <Route path="/area" element={ <Area/> }/>
-                            <Route path="/bar" element={ <Bar/> }/>
-                            <Route path="/pie" element={ <Pie/> }/>
-                            <Route path="/financial" element={ <Financial/> }/>
-                            <Route path="/color-mapping" element={ <ColorMapping/> }/>
-                            <Route path="/pyramid" element={ <Pyramid/> }/>
-                            <Route path="/pyramid" element={ <Stacked/> }/>
-                        </Routes>
+                        <div>
+                            { /* A React component that renders a `<Route>` or `<Redirect>`
+                             * when the URL matches the `path` prop. */ }
+                            <Routes>
+                                { /* Dashboard */ }
+                                <Route path="/" element={ <Ecommerce/> }/>
+                                <Route path="/ecommerce" element={ <Ecommerce/> }/>
+                                { /* Pages */ }
+                                <Route path="/orders" element={ <Orders/> }/>
+                                <Route path="/employees" element={ <Employees/> }/>
+                                <Route path="/customers" element={ <Customers/> }/>
+                                { /* Apps */ }
+                                <Route path="/calendar" element={ <Calendar/> }/>
+                                <Route path="/kanban" element={ <Kanban/> }/>
+                                <Route path="/editor" element={ <Editor/> }/>
+                                <Route path="/color-picker" element={ <ColorPicker/> }/>
+                                { /* Charts */ }
+                                <Route path="/line" element={ <Line/> }/>
+                                <Route path="/area" element={ <Area/> }/>
+                                <Route path="/bar" element={ <Bar/> }/>
+                                <Route path="/pie" element={ <Pie/> }/>
+                                <Route path="/financial" element={ <Financial/> }/>
+                                <Route path="/color-mapping" element={ <ColorMapping/> }/>
+                                <Route path="/pyramid" element={ <Pyramid/> }/>
+                                <Route path="/pyramid" element={ <Stacked/> }/>
+                            </Routes>
+                        </div>
                     </div>
                 </div>
             </BrowserRouter>

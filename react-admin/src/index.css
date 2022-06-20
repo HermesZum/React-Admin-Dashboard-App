@@ -6,6 +6,10 @@ body{
     font-family: "Open Sans", sans-serif;
 }
 
+.bg-h-pattern {
+    background-image: url('./assets/img/amount.png');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -56,4 +60,108 @@ body{
 
 .sidebarCloseButton {
     @apply block mt-4 mr-3 p-3 text-xl rounded-full hover:bg-light-gray md:hidden;
+}
+
+.ecommercePage {
+    @apply mt-12;
+}
+
+.ecommerceContainer {
+    @apply flex flex-wrap justify-center lg:flex-nowrap;
+}
+
+.ecommerceContent {
+    @apply bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-h-pattern bg-no-repeat bg-cover bg-center;
+}
+
+.ecommerceLeftInfo {
+    @apply flex justify-between items-center;
+}
+
+.ecommerceInfoTitle {
+    @apply font-bold text-gray-400;
+}
+
+.ecommerceInfoSubtitle {
+    @apply text-2xl;
+}
+
+.ecommerceInfoButton {
+    @apply mt-6;
+}
+
+.ecommerceCards {
+    @apply flex flex-wrap justify-center items-center m-3 gap-3;
+}
+
+.ecommerceCard {
+    @apply bg-white p-4 pt-9 rounded-2xl dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56;
+}
+
+.ecommerceCard p {
+    @apply mt-3;
+}
+
+.ecommerceCardIcon {
+    @apply text-2xl opacity-90 rounded-full p-4 hover:drop-shadow-xl;
+}
+
+.ecommerceCardAmount {
+    @apply text-lg font-semibold;
+}
+
+.ecommerceCardPercentage {
+    @apply text-sm ml-2;
+}
+
+.ecommerceCardTitle {
+    @apply text-sm text-gray-400;
+}
+
+.ecommerceGraphContainer {
+    @apply flex flex-wrap justify-center gap-10;
+}
+
+.ecommerceGraphCard {
+    @apply max-w-full bg-white m-6 p-6 rounded-2xl dark:text-gray-200;
+}
+
+.ecommerceGraphTitle {
+    @apply flex justify-center m-6;
+}
+
+.ecommerceGraphTitle h2 {
+    @apply font-semibold text-2xl;
+}
+
+.ecommerceGraphItems {
+    @apply flex grid justify-center items-center gap-y-6 md:grid-cols-2;
+}
+
+.ecommerceGraphInfo {
+    @apply flex flex-col items-center;
+}
+
+.ecommerceGraphAmount {
+    @apply text-3xl font-semibold;
+}
+
+.ecommerceGraphPercentage {
+    @apply p-1.5 ml-3 cursor-pointer rounded-full text-white text-xs bg-green-400 hover:drop-shadow-xl;
+}
+
+.ecommerceGraphSubtitle {
+    @apply text-base;
+}
+
+.ecommerceGraphTopMargin {
+    @apply mt-6;
+}
+
+.ecommerceGraphStackedSubtitle {
+    @apply flex gap-6 my-6;
+}
+
+.ecommerceGraphStackedSubtitle p {
+    @apply flex;
 }
